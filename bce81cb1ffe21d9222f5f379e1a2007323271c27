@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5a72e520_c854cfcc",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-20T10:37:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a72e520_a59fbe4f",
+      "range": {
+        "startLine": 32,
+        "startChar": 14,
+        "endLine": 32,
+        "endChar": 15
+      },
+      "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a72e520_e5c0d62c",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 4
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "5a72e520_2863a3b2",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-20T10:37:04Z",
+      "side": 1,
+      "message": "you are right.\nAlso, I double-checked and this is not even referenced in the code base so I proposed https://review.openstack.org/#/c/529288/ to remove it.",
+      "parentUuid": "5a72e520_e5c0d62c",
+      "range": {
+        "startLine": 41,
+        "startChar": 23,
+        "endLine": 41,
+        "endChar": 26
+      },
+      "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a72e520_85c9e25c",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 4
@@ -59,6 +107,30 @@
       "writtenOn": "2017-12-18T16:36:48Z",
       "side": 1,
       "message": "Could you switch doc building to PBR as done in https://github.com/rdo-packages/cloudkitty-dashboard-distgit/blob/rpm-master/openstack-cloudkitty-ui.spec#L53-L56",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 33
+      },
+      "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_e8518bd9",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-20T10:37:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a72e520_85c9e25c",
       "range": {
         "startLine": 62,
         "startChar": 0,
@@ -135,6 +207,48 @@
     },
     {
       "key": {
+        "uuid": "5a72e520_e868ab89",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-20T10:37:04Z",
+      "side": 1,
+      "message": "I was basing on https://github.com/rdo-packages/mistral-dashboard-distgit/blob/4db3d7b1a77dfe4dd685e73d821ce5164c2d22ea/openstack-mistral-ui.spec#L79\n\nshould I change this anyways?",
+      "parentUuid": "5a72e520_25bbcec5",
+      "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_080507c2",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-20T10:37:04Z",
+      "side": 1,
+      "message": "I honestly based on both mistral and cloudkitty as examples.\nIf there\u0027s nothing to prevent us from enabling test, I\u0027ll be happy to do so.",
+      "parentUuid": "5a72e520_25e2eed5",
+      "range": {
+        "startLine": 73,
+        "startChar": 64,
+        "endLine": 73,
+        "endChar": 67
+      },
+      "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a72e520_c5c3da36",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 4
@@ -169,6 +283,24 @@
       "writtenOn": "2017-12-18T16:36:48Z",
       "side": 1,
       "message": "Doc subpackage also needs license file, add line\n\n%license LICENSE",
+      "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_085ee7e9",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 103
+      },
+      "writtenOn": "2017-12-20T10:37:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a72e520_a5c6de47",
       "revId": "bce81cb1ffe21d9222f5f379e1a2007323271c27",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
