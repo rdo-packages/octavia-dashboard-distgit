@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a72e520_68b91be9",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2017-12-20T13:43:59Z",
+      "side": 1,
+      "message": "I think BRs should be unversioned",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 41
+      },
+      "revId": "7b0f561d74d35f104ae62de65b25dd019a971427",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a72e520_08ba67e1",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 6
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2017-12-20T13:43:59Z",
+      "side": 1,
+      "message": "%files -n python-%{openstack_name}-doc",
+      "revId": "7b0f561d74d35f104ae62de65b25dd019a971427",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
