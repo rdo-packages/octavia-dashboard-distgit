@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "fa963961_6cad0488",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-01-16T10:44:31Z",
+      "side": 1,
+      "message": "We are keeping doc related BR\u0027s with doc subpackage so to avoid installing then when with_doc\u003d0,\nohh but here there is no doc guard, so can be kept in the toplevel package or sub package, but it\u0027s good to keep in subpackage.",
+      "parentUuid": "fa963961_ac7c2c21",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa963961_cc865013",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "fa963961_8ca04892",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-01-16T10:44:31Z",
+      "side": 1,
+      "message": "I kept it here as upstream still has not removed in doc/requirements.txt but can be removed.",
+      "parentUuid": "fa963961_cc865013",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa963961_ccaf7093",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2018-01-16T10:05:04Z",
       "side": 1,
       "message": "I think barbicanclient is not a BR",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa963961_aca30c9e",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-01-16T10:44:31Z",
+      "side": 1,
+      "message": "it\u0027s required when building doc so i kept.",
+      "parentUuid": "fa963961_ccaf7093",
       "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
