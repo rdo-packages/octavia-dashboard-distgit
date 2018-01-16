@@ -143,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "fa963961_cc02d06f",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2018-01-16T11:14:44Z",
+      "side": 1,
+      "message": "https://github.com/openstack/octavia-dashboard/blob/master/requirements.txt#L9\nhttps://github.com/openstack/octavia-dashboard/blob/a7e65db38ee676b5a12b117fab86ca46d4229828/octavia_dashboard/api/rest/barbican.py#L17\n\nAPI doc generation requires module imported to be available.",
+      "parentUuid": "fa963961_6cdbc41c",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa963961_ccb890e8",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 2
