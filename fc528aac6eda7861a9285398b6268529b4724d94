@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "fa963961_ac7c2c21",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2018-01-16T10:05:04Z",
+      "side": 1,
+      "message": "IIRC BRs should be placed in the top-level package. If so, please move them back.",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa963961_cc865013",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2018-01-16T10:05:04Z",
+      "side": 1,
+      "message": "oslo-sphinx is deprecated in favor of python-openstackdocstheme. octavia-dashboard uses the latter. We can remove this BR.",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa963961_ccaf7093",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2018-01-16T10:05:04Z",
+      "side": 1,
+      "message": "I think barbicanclient is not a BR",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa963961_ccb890e8",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 2
