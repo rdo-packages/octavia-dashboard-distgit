@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "fa963961_4cd8001e",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2018-01-16T11:08:06Z",
+      "side": 1,
+      "message": "Point taken! https://review.openstack.org/#/c/534238/",
+      "parentUuid": "fa963961_8ca04892",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa963961_ccaf7093",
         "filename": "openstack-octavia-ui.spec",
         "patchSetId": 2
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "it\u0027s required when building doc so i kept.",
       "parentUuid": "fa963961_ccaf7093",
+      "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa963961_6cdbc41c",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 432
+      },
+      "writtenOn": "2018-01-16T11:08:06Z",
+      "side": 1,
+      "message": "Could you please point me to here such dependency exist?\n\n$ grep -ri barbican .\npwd\n/home/cgoncalves/dev/repos/openstack/octavia-dashboard/doc",
+      "parentUuid": "fa963961_aca30c9e",
       "revId": "fc528aac6eda7861a9285398b6268529b4724d94",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
