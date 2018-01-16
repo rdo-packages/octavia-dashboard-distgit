@@ -26,12 +26,9 @@ BuildRequires:  python-testtools
 BuildRequires:  python-ddt
 BuildRequires:  python-django-nose
 BuildRequires:  python-nose-exclude
-BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-pbr
 BuildRequires:  python-selenium
-BuildRequires:  python-openstackdocstheme
 BuildRequires:  python-subunit
-BuildRequires:  python-sphinx
 BuildRequires:  python-oslotest
 BuildRequires:  openstack-macros
 
@@ -52,11 +49,17 @@ for Octavia.
 %package -n python-%{openstack_name}-doc
 Summary:        Documentation for OpenStack Octavia Dashboard for Horizon
 
+BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-sphinx
+BuildRequires:  python-openstackdocstheme
+BuildRequires:  openstack-dashboard
+BuildRequires:  python-barbicanclient
+
 %description -n python-%{openstack_name}-doc
 Documentation for Octavia Dashboard
 
 %prep
-%autosetup -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Let RPM handle the dependencies
 %py_req_cleanup
 
@@ -64,7 +67,8 @@ Documentation for Octavia Dashboard
 %py2_build
 
 # Build html documentation
-python setup.py build_sphinx -b html
+export PYTHONPATH="%{_datadir}/openstack-dashboard:%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_sitelib}"
+sphinx-build -W -b html doc/source doc/build/html
 # Remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 
