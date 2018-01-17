@@ -34,6 +34,7 @@ BuildRequires:  python-subunit
 BuildRequires:  python-sphinx
 BuildRequires:  python-oslotest
 BuildRequires:  openstack-macros
+BuildRequires:  openstack-dashboard
 
 Requires:       openstack-dashboard
 Requires:       python-pbr >= 2.0.0
