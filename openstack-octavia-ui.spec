@@ -95,3 +95,4 @@ install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %license LICENSE
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/octavia-dashboard/commit/?id=6c056e2228524dc05b47b84055cc6134addf9922
