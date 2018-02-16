@@ -19,27 +19,27 @@ BuildArch:      noarch
 
 BuildRequires:  git
 BuildRequires:  python2-devel
-BuildRequires:  python-setuptools
-BuildRequires:  python-testrepository
-BuildRequires:  python-testscenarios
-BuildRequires:  python-testtools
-BuildRequires:  python-ddt
-BuildRequires:  python-django-nose
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-testrepository
+BuildRequires:  python2-testscenarios
+BuildRequires:  python2-testtools
+BuildRequires:  python2-ddt
+BuildRequires:  python2-django-nose
 BuildRequires:  python-nose-exclude
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 BuildRequires:  python-selenium
-BuildRequires:  python-subunit
-BuildRequires:  python-oslotest
+BuildRequires:  python2-subunit
+BuildRequires:  python2-oslotest
 BuildRequires:  openstack-macros
 
 Requires:       openstack-dashboard
-Requires:       python-pbr >= 2.0.0
-Requires:       python-babel >= 2.3.4
-Requires:       python-openstacksdk >= 0.9.19
-Requires:       python-oslo-log >= 3.30.0
-Requires:       python-barbicanclient >= 4.0.0
-Requires:       python-keystoneclient >= 1:3.8.0
-Requires:       python-six >= 1.10.0
+Requires:       python2-pbr >= 2.0.0
+Requires:       python2-babel >= 2.3.4
+Requires:       python2-openstacksdk >= 0.9.19
+Requires:       python2-oslo-log >= 3.36.0
+Requires:       python2-barbicanclient >= 4.0.0
+Requires:       python2-keystoneclient >= 1:3.8.0
+Requires:       python2-six >= 1.10.0
 
 %description
 Octavia Dashboard is an extension for OpenStack Dashboard that provides a UI
@@ -49,11 +49,11 @@ for Octavia.
 %package -n python-%{openstack_name}-doc
 Summary:        Documentation for OpenStack Octavia Dashboard for Horizon
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-oslo-sphinx
+BuildRequires:  python2-openstackdocstheme
 BuildRequires:  openstack-dashboard
-BuildRequires:  python-barbicanclient
+BuildRequires:  python2-barbicanclient
 
 %description -n python-%{openstack_name}-doc
 Documentation for Octavia Dashboard
