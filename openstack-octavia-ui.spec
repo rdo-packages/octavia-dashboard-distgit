@@ -1,4 +1,3 @@
-%global milestone .0rc2
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global with_doc 1
@@ -10,15 +9,13 @@
 
 Name:           openstack-%{openstack_name}
 Version:        1.0.0
-Release:        0.2%{?milestone}%{?dist}
+Release:        1%{?dist}
 Summary:        OpenStack Octavia Dashboard for Horizon
 
 License:        ASL 2.0
 URL:            https://storyboard.openstack.org/#!/project/909
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 
-#
-# patches_base=1.0.0.0rc2
 #
 
 BuildArch:      noarch
@@ -107,6 +104,9 @@ install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Wed Feb 28 2018 RDO <dev@lists.rdoproject.org> 1.0.0-1
+- Update to 1.0.0
+
 * Wed Feb 21 2018 RDO <dev@lists.rdoproject.org> 1.0.0-0.2.0rc1
 - Update to 1.0.0.0rc2
 
