@@ -52,8 +52,8 @@ for Octavia.
 Summary:        Documentation for OpenStack Octavia Dashboard for Horizon
 
 BuildRequires:  python2-sphinx
-BuildRequires:  python2-oslo-sphinx
 BuildRequires:  python2-openstackdocstheme
+BuildRequires:  python2-sphinxcontrib-apidoc
 BuildRequires:  openstack-dashboard
 BuildRequires:  python2-barbicanclient
 
