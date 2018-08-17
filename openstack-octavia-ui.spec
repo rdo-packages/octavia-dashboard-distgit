@@ -36,9 +36,9 @@ BuildRequires:  openstack-macros
 Requires:       openstack-dashboard
 Requires:       python2-pbr >= 2.0.0
 Requires:       python2-babel >= 2.3.4
-Requires:       python2-openstacksdk >= 0.9.19
+Requires:       python2-openstacksdk >= 0.11.2
 Requires:       python2-oslo-log >= 3.36.0
-Requires:       python2-barbicanclient >= 4.0.0
+Requires:       python2-barbicanclient >= 4.5.2
 Requires:       python2-keystoneclient >= 1:3.8.0
 Requires:       python2-six >= 1.10.0
 
