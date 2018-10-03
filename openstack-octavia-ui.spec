@@ -1,3 +1,15 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
+%endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_sitearch %python%{pyver}_sitearch
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global with_doc 1
@@ -19,28 +31,32 @@ Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstr
 BuildArch:      noarch
 
 BuildRequires:  git
-BuildRequires:  python2-devel
-BuildRequires:  python2-setuptools
-BuildRequires:  python2-testrepository
-BuildRequires:  python2-testscenarios
-BuildRequires:  python2-testtools
-BuildRequires:  python2-ddt
-BuildRequires:  python2-django-nose
-BuildRequires:  python-nose-exclude
-BuildRequires:  python2-pbr
-BuildRequires:  python-selenium
-BuildRequires:  python2-subunit
-BuildRequires:  python2-oslotest
+BuildRequires:  python%{pyver}-devel
+BuildRequires:  python%{pyver}-setuptools
+BuildRequires:  python%{pyver}-testrepository
+BuildRequires:  python%{pyver}-testscenarios
+BuildRequires:  python%{pyver}-testtools
+BuildRequires:  python%{pyver}-ddt
+BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python%{pyver}-subunit
+BuildRequires:  python%{pyver}-oslotest
 BuildRequires:  openstack-macros
 
+# Handle python2 exception
+%if %{pyver} == 2
+BuildRequires:  python-selenium
+%else
+BuildRequires:  python%{pyver}-selenium
+%endif
+
 Requires:       openstack-dashboard
-Requires:       python2-pbr >= 2.0.0
-Requires:       python2-babel >= 2.3.4
-Requires:       python2-openstacksdk >= 0.11.2
-Requires:       python2-oslo-log >= 3.36.0
-Requires:       python2-barbicanclient >= 4.5.2
-Requires:       python2-keystoneclient >= 1:3.8.0
-Requires:       python2-six >= 1.10.0
+Requires:       python%{pyver}-pbr >= 2.0.0
+Requires:       python%{pyver}-babel >= 2.3.4
+Requires:       python%{pyver}-openstacksdk >= 0.11.2
+Requires:       python%{pyver}-oslo-log >= 3.36.0
+Requires:       python%{pyver}-barbicanclient >= 4.5.2
+Requires:       python%{pyver}-keystoneclient >= 1:3.8.0
+Requires:       python%{pyver}-six >= 1.10.0
 
 %description
 Octavia Dashboard is an extension for OpenStack Dashboard that provides a UI
@@ -48,16 +64,17 @@ for Octavia.
 
 %if 0%{?with_doc}
 # Documentation package
-%package -n python-%{openstack_name}-doc
+%package -n python%{pyver}-%{openstack_name}-doc
 Summary:        Documentation for OpenStack Octavia Dashboard for Horizon
+%{?python_provide:%python_provide python%{pyver}-%{openstack_name}-doc}
 
-BuildRequires:  python2-sphinx
-BuildRequires:  python2-openstackdocstheme
-BuildRequires:  python2-sphinxcontrib-apidoc
+BuildRequires:  python%{pyver}-sphinx
+BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
 BuildRequires:  openstack-dashboard
-BuildRequires:  python2-barbicanclient
+BuildRequires:  python%{pyver}-barbicanclient
 
-%description -n python-%{openstack_name}-doc
+%description -n python%{pyver}-%{openstack_name}-doc
 Documentation for Octavia Dashboard
 %endif
 
@@ -67,36 +84,36 @@ Documentation for Octavia Dashboard
 %py_req_cleanup
 
 %build
-%py2_build
+%{pyver_build}
 
 %if 0%{?with_doc}
 # Build html documentation
-export PYTHONPATH="%{_datadir}/openstack-dashboard:%{python2_sitearch}:%{python2_sitelib}:%{buildroot}%{python2_sitelib}"
-sphinx-build -b html doc/source doc/build/html
-# Remove the sphinx-build leftovers
+export PYTHONPATH="%{_datadir}/openstack-dashboard:%{pyver_sitearch}:%{pyver_sitelib}:%{buildroot}%{pyver_sitelib}"
+sphinx-build-%{pyver} -b html doc/source doc/build/html
+# Remove the sphinx-build-%{pyver} leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
-%py2_install
+%{pyver_install}
 
 # Move config to horizon
 install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1482_project_load_balancer_panel.py
 
 %check
 %if 0%{?with_test}
-%{__python2} manage.py test
+%{pyver_bin} manage.py test
 %endif
 
 %files
 %doc README.rst
 %license LICENSE
-%{python2_sitelib}/octavia_dashboard
-%{python2_sitelib}/*.egg-info
+%{pyver_sitelib}/octavia_dashboard
+%{pyver_sitelib}/*.egg-info
 %{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1482_project_load_balancer_panel.py*
 
 %if 0%{?with_doc}
-%files -n python-%{openstack_name}-doc
+%files -n python%{pyver}-%{openstack_name}-doc
 %doc doc/build/html
 %license LICENSE
 %endif
