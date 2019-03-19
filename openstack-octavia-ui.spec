@@ -58,7 +58,7 @@ BuildRequires:  python%{pyver}-selenium
 Requires:       openstack-dashboard
 Requires:       python%{pyver}-pbr >= 2.0.0
 Requires:       python%{pyver}-babel >= 2.3.4
-Requires:       python%{pyver}-openstacksdk >= 0.11.2
+Requires:       python%{pyver}-openstacksdk >= 0.24.0
 Requires:       python%{pyver}-oslo-log >= 3.36.0
 Requires:       python%{pyver}-barbicanclient >= 4.5.2
 Requires:       python%{pyver}-keystoneclient >= 1:3.8.0
