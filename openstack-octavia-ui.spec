@@ -26,7 +26,7 @@
 %bcond_with tests
 
 Name:           openstack-%{openstack_name}
-Version:        3.0.0
+Version:        3.0.1
 Release:        1%{?dist}
 Summary:        OpenStack Octavia Dashboard for Horizon
 
@@ -127,6 +127,9 @@ install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Wed May 29 2019 RDO <dev@lists.rdoproject.org> 3.0.1-1
+- Update to 3.0.1
+
 * Wed Apr 10 2019 RDO <dev@lists.rdoproject.org> 3.0.0-1
 - Update to 3.0.0
 
