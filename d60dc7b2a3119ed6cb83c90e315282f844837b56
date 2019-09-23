@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14fe85b9_b09873d0",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-09-23T07:43:38Z",
+      "side": 1,
+      "message": "this is not needed to build docs. can u recheck.",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 35
+      },
+      "revId": "d60dc7b2a3119ed6cb83c90e315282f844837b56",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
