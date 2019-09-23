@@ -79,6 +79,8 @@ BuildRequires:  python%{pyver}-openstackdocstheme
 BuildRequires:  python%{pyver}-sphinxcontrib-apidoc
 BuildRequires:  openstack-dashboard
 BuildRequires:  python%{pyver}-barbicanclient
+BuildRequires:  python%{pyver}-sphinxcontrib-rsvgconverter
+BuildRequires:  python%{pyver}-reno
 
 %description -n python%{pyver}-%{openstack_name}-doc
 Documentation for Octavia Dashboard
