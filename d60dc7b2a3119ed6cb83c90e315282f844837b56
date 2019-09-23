@@ -22,6 +22,30 @@
       "revId": "d60dc7b2a3119ed6cb83c90e315282f844837b56",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c285ed8_504e0418",
+        "filename": "openstack-octavia-ui.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2019-09-23T08:13:16Z",
+      "side": 1,
+      "message": "Yes, I forgot we don\u0027t build release notes while building documentation. I removed it in patch 3",
+      "parentUuid": "14fe85b9_b09873d0",
+      "range": {
+        "startLine": 83,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 35
+      },
+      "revId": "d60dc7b2a3119ed6cb83c90e315282f844837b56",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
