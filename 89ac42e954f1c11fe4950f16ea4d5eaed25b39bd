@@ -1,0 +1,9 @@
+Code-Review+2: Carlos Goncalves <cgoncalves@redhat.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 01 Oct 2019 05:02:01 +0000
+Reviewed-on: https://review.rdoproject.org/r/22695
+Project: openstack/octavia-dashboard-distgit
+Branch: refs/heads/train-rdo
