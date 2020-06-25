@@ -27,7 +27,7 @@
 
 Name:           openstack-%{openstack_name}
 Version:        4.0.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Octavia Dashboard for Horizon
 
 License:        ASL 2.0
@@ -107,7 +107,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %{pyver_install}
 
 # Move config to horizon
-install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1482_project_load_balancer_panel.py
+install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1482_project_load_balancer_panel.py
 
 %check
 %if 0%{?with_test}
@@ -128,6 +128,9 @@ install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Thu Jun 25 2020 Tobias Urdin <tobias.urdin@binero.com> 4.0.0-2
+- Fixed horizon enabled files having wrong mode.
+
 * Wed Oct 16 2019 RDO <dev@lists.rdoproject.org> 4.0.0-1
 - Update to 4.0.0
 
