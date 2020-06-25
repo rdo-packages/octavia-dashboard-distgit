@@ -80,7 +80,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %{py3_install}
 
 # Move config to horizon
-install -p -D -m 640 octavia_dashboard/enabled/_1482_project_load_balancer_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1482_project_load_balancer_panel.py
+install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel.py %{buildroot}%{_datadir}/openstack-dashboard/openstack_dashboard/local/enabled/_1482_project_load_balancer_panel.py
 
 %check
 %if 0%{?with_test}
