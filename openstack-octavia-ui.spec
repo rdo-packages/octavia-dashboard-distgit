@@ -1,4 +1,6 @@
 %global milestone .0rc2
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global pypi_name octavia-dashboard
@@ -15,10 +17,20 @@ Summary:        OpenStack Octavia Dashboard for Horizon
 License:        ASL 2.0
 URL:            https://storyboard.openstack.org/#!/project/909
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 
 # patches_base=6.0.0.0rc2
 
 BuildArch:      noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 
 BuildRequires:  git
 BuildRequires:  python3-devel
@@ -64,6 +76,10 @@ Documentation for Octavia Dashboard
 %endif
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Let RPM handle the dependencies
 %py_req_cleanup
@@ -104,6 +120,9 @@ install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Wed Oct 14 2020 Joel Capitao <jcapitao@redhat.com> 6.0.0-0.2.0rc1
+- Enable sources tarball validation using GPG signature.
+
 * Thu Oct 08 2020 RDO <dev@lists.rdoproject.org> 6.0.0-0.2.0rc1
 - Update to 6.0.0.0rc2
 
