@@ -13,7 +13,7 @@
 %endif
 %global pyver_bin python%{pyver}
 %global pyver_sitelib %{expand:%{python%{pyver}_sitelib}}
-%global pyver_sitearch %python%{pyver}_sitearch
+%global pyver_sitearch %{expand:%{python%{pyver}_sitearch}}
 %global pyver_install %{expand:%{py%{pyver}_install}}
 %global pyver_build %{expand:%{py%{pyver}_build}}
 # End of macros for py2/py3 compatibility
@@ -142,4 +142,3 @@ install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 
 * Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 4.0.0-0.1.0rc1
 - Update to 4.0.0.0rc1
-
