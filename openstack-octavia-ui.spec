@@ -46,7 +46,7 @@ BuildRequires:  python3-selenium
 Requires:       openstack-dashboard
 Requires:       python3-pbr >= 2.0.0
 Requires:       python3-babel >= 2.3.4
-Requires:       python3-openstacksdk >= 0.46.0
+Requires:       python3-openstacksdk >= 0.53.0
 Requires:       python3-oslo-log >= 3.36.0
 Requires:       python3-barbicanclient >= 4.5.2
 Requires:       python3-keystoneclient >= 1:3.22.0
