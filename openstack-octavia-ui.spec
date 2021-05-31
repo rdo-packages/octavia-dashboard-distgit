@@ -26,7 +26,7 @@
 %bcond_with tests
 
 Name:           openstack-%{openstack_name}
-Version:        4.0.1
+Version:        4.0.2
 Release:        1%{?dist}
 Summary:        OpenStack Octavia Dashboard for Horizon
 
@@ -128,6 +128,9 @@ install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Mon May 31 2021 RDO <dev@lists.rdoproject.org> 4.0.2-1
+- Update to 4.0.2
+
 * Mon Feb 01 2021 RDO <dev@lists.rdoproject.org> 4.0.1-1
 - Update to 4.0.1
 
