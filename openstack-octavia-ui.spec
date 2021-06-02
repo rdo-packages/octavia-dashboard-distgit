@@ -2,10 +2,10 @@
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global pyver %{python3_pkgversion}
 # Doc build is trying to access location /usr/share/openstack-dashboard/local for
-# writing 'secret_key_store.lock', LOCAL_PATH=/tmp (writable) and SECRET_KEY is set in
-# /etc/openstack-dashboard/local_settings but this file is not readable during
-# mockbuild as permission for this file is 0640(root:apache). Until the issue
-# is cleared in python-django-horizon packages disabling doc build.
+# writing 'secret_key_store.lock', LOCAL_PATH is /tmp (writable) and SECRET_KEY
+# is set in /etc/openstack-dashboard/local_settings but this file is not readable
+# during mockbuild as permission for this file is 0640(root:apache). Until the
+# issue is cleared in python-django-horizon packages disabling doc build.
 %global with_doc 0
 %else
 %global pyver 2
