@@ -2,7 +2,7 @@
 global:Registered-Users	Registered Users
 419f26365884944b3ede5dad811c33cda4cd492f	openstack/octavia-dashboard-ptl
 4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Service Users
 744a998102310feb88de8e6e9a7117d383075aca	openstack/octavia-dashboard-core
 global:Anonymous-Users	Anonymous Users
 401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
