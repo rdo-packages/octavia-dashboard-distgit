@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global pypi_name octavia-dashboard
@@ -9,7 +9,7 @@
 %bcond_with tests
 
 Name:           openstack-%{openstack_name}
-Version:        7.0.0
+Version:        7.0.1
 Release:        1%{?dist}
 Summary:        OpenStack Octavia Dashboard for Horizon
 
@@ -119,6 +119,9 @@ install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Thu Aug 11 2022 RDO <dev@lists.rdoproject.org> 7.0.1-1
+- Update to 7.0.1
+
 * Wed Apr 14 2021 RDO <dev@lists.rdoproject.org> 7.0.0-1
 - Update to 7.0.0
 
