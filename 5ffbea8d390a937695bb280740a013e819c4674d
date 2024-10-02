@@ -1,0 +1,8 @@
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 02 Oct 2024 12:49:16 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/octavia-dashboard-distgit/+/54894
+Project: openstack/octavia-dashboard-distgit
+Branch: refs/heads/dalmatian-rdo
