@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2ef3fe0ec2b075ab7458b5f8b702b20b13df2318
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order bashate xvfbwrapper
@@ -15,7 +15,7 @@
 %bcond_with tests
 
 Name:           openstack-%{openstack_name}
-Version:        13.0.0
+Version:        13.0.1
 Release:        1%{?dist}
 Summary:        OpenStack Octavia Dashboard for Horizon
 
@@ -125,6 +125,9 @@ install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 %endif
 
 %changelog
+* Fri Jul 25 2025 RDO <dev@lists.rdoproject.org> 13.0.1-1
+- Update to 13.0.1
+
 * Wed Apr 03 2024 RDO <dev@lists.rdoproject.org> 13.0.0-1
 - Update to 13.0.0
 
