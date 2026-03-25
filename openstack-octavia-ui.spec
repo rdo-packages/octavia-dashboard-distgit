@@ -133,3 +133,4 @@ install -p -D -m 644 octavia_dashboard/enabled/_1482_project_load_balancer_panel
 * Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 15.0.0-0.1.0rc1
 - Update to 15.0.0.0rc1
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/octavia-dashboard/commit/cfad1385ce1dade4ee487aa8874b2c4ef78738d9
